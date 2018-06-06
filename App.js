@@ -6,7 +6,7 @@ import Article from './src/components/article';
 // import Test from './test';
 
 import { getNews } from './src/news';
-import { getBleacher } from './src/bleacher';
+// import { getBleacher } from './src/bleacher';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -26,6 +26,9 @@ export default class App extends React.Component {
     getNews()
       .then(articles => this.setState({ articles: articles, refreshing: false }))
       .catch(() => this.setState({ refreshing: false }));
+    // getBleacher()
+    //   .then(articles => this.setState({ articles: articles, refreshing: false }))
+    //   .catch(() => this.setState({ refreshing: false }));
   }
 
   handleRefresh() {

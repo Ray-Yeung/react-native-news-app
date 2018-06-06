@@ -44,7 +44,6 @@ export default class App extends React.Component {
       <FlatList 
         data={this.state.articles}
         renderItem={({ item }) => <Article article={item} />}
-        keyExtractor={item => item.url}
         refreshing={this.state.refreshing}
         onRefresh={this.handleRefresh.bind(this)}
       />

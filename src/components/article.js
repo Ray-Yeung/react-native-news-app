@@ -15,9 +15,6 @@ export default class Article extends React.Component {
     } = this.props.article;
     const { noteStyle, featuredTitleStyle } = styles;
     const time = moment(publishedAt || moment.now()).fromNow();
-    const defaultImg =
-      'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg';
-
     return (
       <TouchableOpacity
         useForeground
